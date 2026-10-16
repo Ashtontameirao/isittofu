@@ -25,6 +25,13 @@ import 'package:isittofu/data/ios18.5.g.dart';
 import 'package:isittofu/data/ios26.0.g.dart';
 import 'package:isittofu/data/ios26.4.g.dart';
 import 'package:isittofu/data/ios27.0.g.dart';
+import 'package:isittofu/data/ios27.2.g.dart';
+import 'package:isittofu/data/ios4.0.g.dart';
+import 'package:isittofu/data/ios4.1.g.dart';
+import 'package:isittofu/data/ios4.2.g.dart';
+import 'package:isittofu/data/ios5.0.g.dart';
+import 'package:isittofu/data/ios6.0.g.dart';
+import 'package:isittofu/data/ios7.0.g.dart';
 import 'package:isittofu/data/ios8.0.g.dart';
 import 'package:isittofu/data/ios8.2.g.dart';
 import 'package:isittofu/data/ios8.3.g.dart';
@@ -32,6 +39,16 @@ import 'package:isittofu/data/ios9.0.g.dart';
 import 'package:isittofu/data/ios9.1.g.dart';
 
 final List<RegExp> patterns = List.unmodifiable(<RegExp>[
+  ios4_0Pattern,
+  ios4_1Pattern,
+  ios4_2Pattern,
+  ios4_2Pattern, // iOS 4.3 is same as iOS 4.2?
+  ios5_0Pattern,
+  ios5_0Pattern, // iOS 5.1 is same as iOS 5.0?
+  ios6_0Pattern,
+  ios6_0Pattern, // iOS 6.1 is same as iOS 6.0?
+  ios7_0Pattern,
+  ios7_0Pattern, // iOS 7.1 is same as iOS 7.0?
   ios8_0Pattern,
   ios8_0Pattern, // iOS 8.1 is same as iOS 8.0
   ios8_2Pattern, // iOS 8.2 differs by a Sinhala codepoint & 4 PUA codepoints
@@ -117,6 +134,16 @@ final List<RegExp> patterns = List.unmodifiable(<RegExp>[
 ]);
 
 enum IosPlatform {
+  iOS4_0,
+  iOS4_1,
+  iOS4_2,
+  iOS4_3,
+  iOS5_0,
+  iOS5_1,
+  iOS6_0,
+  iOS6_1,
+  iOS7_0,
+  iOS7_1,
   iOS8_0,
   iOS8_1,
   iOS8_2,
@@ -201,9 +228,21 @@ enum IosPlatform {
   iOS27_2,
 }
 
-// As measured by the App Store on June 7, 2026
+// As measured by the App Store on September 16, 2026
 // https://developer.apple.com/support/app-store/
 const List<double> distribution = [
+  0.07 / 63, // iOS4_0
+  0.07 / 63, // iOS4_1
+  0.07 / 63, // iOS4_2
+  0.07 / 63, // iOS4_3
+  0.07 / 63, // iOS5_0
+  0.07 / 63, // iOS5_1
+  0.07 / 63, // iOS6_0
+  0.07 / 63, // iOS6_1
+  0.07 / 63, // iOS7_0
+  0.07 / 63, // iOS7_1
+  0.07 / 63, // iOS8_0
+  0.07 / 63, // iOS8_0
   0.07 / 63, // iOS8_0
   0.07 / 63, // iOS8_1
   0.07 / 63, // iOS8_2
