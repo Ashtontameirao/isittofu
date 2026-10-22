@@ -70,7 +70,7 @@ final List<RegExp> patterns = List.unmodifiable(<RegExp>[
   ios12_0Pattern,
   ios12_1Pattern, // iOS 12.1 differs by Emojis and Georgian Extended block
   ios12_2Pattern, // iOS 12.2 differs by 5 Latin codepoints
-  ios12_1Pattern, // iOS 12.3 is same as iOS 12.1
+  ios12_2Pattern, // iOS 12.3 is same as iOS 12.2
   ios12_4Pattern, // iOS 12.4 differs by Square Reiwa Symbol and 6 PUA codepoints
   ios13_0Pattern,
   ios13_1Pattern, // Emojis Only
@@ -129,7 +129,7 @@ final List<RegExp> patterns = List.unmodifiable(<RegExp>[
   ios26_4Pattern, // iOS 26.6 is same as iOS 26.4
   ios26_4Pattern, // iOS 26.7 is same as iOS 26.4
   ios27_0Pattern,
-  ios27_0Pattern, // iOS 27.1 is same as iOS 27.0?
+  ios27_0Pattern, // iOS 27.1 is same as iOS 27.0
   ios27_2Pattern, // New Codepoints?
 ]);
 
